@@ -1,0 +1,17 @@
+#include<cstdio>
+int main() {
+    int A, B, D, n = 0; //十进制数A和B
+    scanf("%d%d%d", &A, &B, &D);
+    int C = A + B;
+    int t[31];
+//“除基取余”法将C转换为D进制数
+    do {
+        t[n++] = C % D;
+        C = C / D;
+        //k++;
+    } while (C != 0);
+    for(int i = n - 1; i > -1; i--) {
+        printf("%d", t[i]);
+    }
+    return 0;
+}
