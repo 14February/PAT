@@ -1,0 +1,27 @@
+#include<cstdio>
+#include<cstring>
+
+const int maxn = 256;
+
+bool judge(char str[]) {
+     int len = strlen(str);
+     for(int j = 0; j< len / 2; j++) {
+         if(str[j] == str[len - 1 - j])
+             return true;
+         else
+             return false;
+     }
+ }
+
+int main() {
+    char str[maxn];
+    while(scanf("%s", str)) {
+        bool flag = judge(str);
+        if(flag == true) {
+            printf("YES\n");
+        }
+        else
+            printf("NO\n");
+    }
+    return 0;
+}
